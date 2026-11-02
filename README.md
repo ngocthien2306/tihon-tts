@@ -1,5 +1,7 @@
 # TiHon-TTS
 
+**Vietnamese text-to-speech small enough for a microcontroller.**
+
 TiHon-TTS is a Vietnamese text-to-speech model with **100,118 parameters** and four voices in one network. It turns
 text into 24 kHz audio without a vocoder network: the model predicts pitch, voicing and spectral envelopes, and a
 small harmonic-plus-noise synthesiser renders the waveform. It is built to run on small edge devices, on CPU or NPU.
@@ -233,7 +235,7 @@ voices of [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-
 ```bibtex
 @misc{tihontts2026,
   author       = {Nguyen Ngoc Thien},
-  title        = {TiHon-TTS: Vietnamese text-to-speech in 100K parameters},
+  title        = {TiHon-TTS: Tiny Vietnamese Text-to-Speech for Edge Device},
   year         = {2026},
   howpublished = {\url{https://huggingface.co/ngocthien/tihon-tts}}
 }
