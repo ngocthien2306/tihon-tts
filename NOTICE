@@ -1,0 +1,13 @@
+TiHon-TTS
+Weights, configuration and code in this repository: CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/).
+
+The model architecture and tihon_tts/model.py are adapted from AuroraTTS-100K by AuroraAI-Research
+(https://huggingface.co/AuroraAI-Research/AuroraTTS-100K), licensed under the Apache License, Version 2.0
+(https://www.apache.org/licenses/LICENSE-2.0). Changes: Vietnamese syllable tokens, four voices with per-voice token
+embeddings, decoder FiLM and F0 statistics, text-only distillation training, per-voice DSP post-processing, TFLite
+export and inference code.
+
+Training used the Vocos vocoder charactr/vocos-mel-24khz (MIT, https://huggingface.co/charactr/vocos-mel-24khz).
+
+Voice sources: pnnbao-ump/ngochuyen_voice (CC BY-NC 4.0); InfoRe Technology 25-hour Vietnamese speech corpus
+(doof-ferb/infore1_25hours, CC BY 4.0); preset voices of pnnbao-ump/VieNeu-TTS-v3-Turbo (Apache-2.0).

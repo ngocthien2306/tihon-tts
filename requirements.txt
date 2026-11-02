@@ -1,0 +1,6 @@
+torch
+numpy
+safetensors
+huggingface_hub
+# optional, for the TFLite backend (graphs on request in ngocthien/tihon-tts-int16-npu)
+# ai-edge-litert

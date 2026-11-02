@@ -1,0 +1,115 @@
+{
+  "model_type": "tihon-tts",
+  "architectures": [
+    "TiHonTTSModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_tihon.TiHonTTSConfig",
+    "AutoModel": "modeling_tihon.TiHonTTSModel"
+  },
+  "custom_pipelines": {
+    "text-to-speech": {
+      "impl": "pipeline_tihon.TiHonTTSPipeline",
+      "pt": [
+        "AutoModel"
+      ],
+      "tf": [],
+      "type": "audio"
+    }
+  },
+  "sample_rate": 24000,
+  "hop_length": 256,
+  "architecture": {
+    "d_model": 56,
+    "vocab_sizes": [
+      25,
+      2,
+      15,
+      11,
+      6,
+      4,
+      6
+    ],
+    "encoder_kernel": 5,
+    "encoder_loops": 4,
+    "gru_hidden": 28,
+    "predictor_channels": 32,
+    "decoder_layers": 9,
+    "decoder_kernel": 5,
+    "decoder_dilations": [
+      1,
+      2,
+      4
+    ],
+    "decoder_shared_ffns": 3,
+    "harmonic_bands": 40,
+    "noise_bands": 24,
+    "n_harmonics": 80,
+    "fir_taps": 65,
+    "noise_fft": 1024
+  },
+  "voices": [
+    {
+      "id": 0,
+      "name": "ngochuyen",
+      "display_name": "Ngọc Huyền",
+      "gender": "female",
+      "dsp": {
+        "mvf_hz": 5000,
+        "mp_low_hz": 1500,
+        "eq": [
+          [
+            700,
+            0
+          ],
+          [
+            1400,
+            -2.6
+          ],
+          [
+            2800,
+            2.5
+          ],
+          [
+            5700,
+            1.0
+          ],
+          [
+            9400,
+            -6.5
+          ]
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "infore",
+      "display_name": "InfoRe",
+      "gender": "female",
+      "dsp": {
+        "mvf_hz": 5000,
+        "mp_low_hz": 1500
+      }
+    },
+    {
+      "id": 2,
+      "name": "trucly",
+      "display_name": "Trúc Ly",
+      "gender": "female",
+      "dsp": {
+        "mvf_hz": 5000,
+        "mp_low_hz": 1500
+      }
+    },
+    {
+      "id": 3,
+      "name": "haidang",
+      "display_name": "Hải Đăng",
+      "gender": "male",
+      "dsp": {
+        "mvf_hz": 5000,
+        "mp_low_hz": 1500
+      }
+    }
+  ]
+}
