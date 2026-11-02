@@ -127,8 +127,8 @@ The model is split for a Cortex-M CPU with an Ethos-U NPU:
 | `dec`: dilated decoder with the voice FiLM, 96 frames + 48 context frames on each side | NPU | 96 frames (1.02 s) |
 | Harmonic-plus-noise synthesis (FFT from CMSIS-DSP) | CPU | frame |
 
-The three NPU graphs use int8 weights and int16 activations. Vela 5.2 reports no CPU operators for any Ethos-U55,
-U65 or U85 configuration. The graphs, their inputs and outputs, their quality and their NPU cost for each
+The three NPU graphs use int8 weights and int16 activations (int8-activation versions, with half the NPU work and
+lower quality, are also available). Vela 5.2 reports no CPU operators for any Ethos-U55, U65 or U85 configuration. The graphs, their inputs and outputs, their quality and their NPU cost for each
 configuration are in [`ngocthien/tihon-tts-int16-npu`](https://huggingface.co/ngocthien/tihon-tts-int16-npu) (access on request). The C99
 host code is not released.
 
@@ -207,7 +207,7 @@ exponential moving average. The training code is not released yet.
 | `samples/` | one sample per voice |
 
 Float32 TFLite graphs of the whole network (for the TFLite backend and for conversion to other runtimes) and int16
-graphs for Ethos-U NPUs are in [`ngocthien/tihon-tts-int16-npu`](https://huggingface.co/ngocthien/tihon-tts-int16-npu), access on request.
+and int8 graphs for Ethos-U NPUs are in [`ngocthien/tihon-tts-int16-npu`](https://huggingface.co/ngocthien/tihon-tts-int16-npu), access on request.
 
 ## 7. Limitations
 
